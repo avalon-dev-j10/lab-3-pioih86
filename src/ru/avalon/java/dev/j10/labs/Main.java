@@ -1,6 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
 
 import java.util.Arrays;
+import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
 import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
 import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
 import ru.avalon.java.dev.j10.labs.sort.SelectionSort;
@@ -10,13 +11,14 @@ public class Main {
 
     public static void main(String[] args) {
         int[] array = new int[20];
-//        Initializer fibonacciInit   = new FibonacciInitializer();               //НЕ ВИДИТ!!!!!!!!!!!
+        Initializer fibonacciInit   = new FibonacciInitializer();               
         Initializer randomInit      = new RandomInitializer(-50, 50);
         Sort         bubbleSort     = new BubbleSort();
         Sort         selectionSort  = new SelectionSort();
         Sort         shellSort      = new ShellSort();
         
-//        fibonacciInit.initialize(array);
+        fibonacciInit.initialize(array);
+        
         randomInit.initialize(array);        
         print(bubbleSort, array);
         
