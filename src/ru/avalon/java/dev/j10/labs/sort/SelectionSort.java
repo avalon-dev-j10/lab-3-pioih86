@@ -17,9 +17,24 @@ public class SelectionSort implements Sort {
     /**
      * {@inheritDoc}
      */
+    String name = "Сортировка выбором";
+    
     public void sort(int[] array) {
-        /*
-         * TODO(Студент): Реализовать метод sort класса SelectionSort
-         */
+  
+        for (int i = 0; i < array.length - 1; i++) 
+        {  
+            int max = i; 
+            for (int j = i + 1; j < array.length; j++) {
+                    if (array[j] > array[max]) 
+                        max = j;
+                }
+            int buff = array[max]; 
+            array[max] = array[i]; 
+            array[i] = buff; 
+        } 
     }
+    
+    public void test(){}
+    
+    public String getName() { return name; }
 }
