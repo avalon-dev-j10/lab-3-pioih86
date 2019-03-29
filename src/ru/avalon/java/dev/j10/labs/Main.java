@@ -19,6 +19,10 @@ public class Main {
         
         fibonacciInit.initialize(array);
         
+        /*  TODO (Проверка№1 ЛР№3)
+            - Вывести последовательность чисел Фибоначи и их сумму!
+        */
+        
         randomInit.initialize(array);        
         print(bubbleSort, array);
         
@@ -27,6 +31,8 @@ public class Main {
         
         randomInit.initialize(array);
         print(shellSort, array);       
+        
+        
 
  	    /*
 	     * TODO(Студент): Выполнить действия над массивом чисел 
@@ -75,6 +81,11 @@ public class Main {
                 if ( i == array.length - 2) break;
                 System.out.print(", ");
             }
+            /*  TODO (Проверка№1 ЛР№3)
+                - При выоде отсортированного массива выводится 19 чисел, хотя их 20!
+                Исправить!
+                - Добавить комментарии к полям и методам класса
+            */
             System.out.println("");
             System.out.println("------------------------------------------------");
         }

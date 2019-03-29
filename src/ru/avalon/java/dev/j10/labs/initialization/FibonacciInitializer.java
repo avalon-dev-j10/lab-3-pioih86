@@ -27,6 +27,14 @@ public class FibonacciInitializer implements Initializer {
      * @param array массив, подлежащий инициализации
      */
     public void initialize(int[] array) {
+        
+        /*  TODO (Проверка№1 ЛР№3)
+            - Перед обращением к массиву следует делать проверку на правильность массива,
+            если array = null, возникает ошибка! Исправить!
+            - Добавить комментарии к полям и методам класса.
+            - Функция Math.random здесь не нада, у тебя четкие значения при 0 и 1.
+            Исправить!
+        */
         if (Math.random() > 0.5){ array[0] = 0;}
         else array[0] = 1;
         if (array.length > 1) {

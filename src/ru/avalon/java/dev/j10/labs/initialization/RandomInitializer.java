@@ -29,6 +29,12 @@ public class RandomInitializer implements Initializer {
         this.max = max;
     }
     
+    /*  TODO (Проверка№1 ЛР№3)
+        - Перед обращением к массиву следует делать проверку на правильность массива,
+        если array = null, возникает ошибка! Исправить!
+        - Добавить комментарии к полям и методам класса
+    */
+    
     public void initialize(int[] array) {
         for( int i = 0; i < array.length; i++ ){
             array[i] = (int)(Math.random()*( max - min + 1 ) - max);
