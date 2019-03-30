@@ -15,18 +15,22 @@ import ru.avalon.java.dev.j10.labs.Sort;
  *
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%A8%D0%B5%D0%BB%D0%BB%D0%B0">Сортировка Шелла</a>
  */
+
+//Класс сортировки Шелла
 public class ShellSort implements Sort {
 
     String name = "Сортировка Шелла";
     
     public void sort(int[] array) {
-        int increment = array.length / 2;
-        while (increment >= 1) {
-            for (int startIndex = 0; startIndex < increment; startIndex++) {
-                insertionSort(array, startIndex, increment);
+            if ( array == null ) return;
+            int increment = array.length / 2;
+            while (increment >= 1) {
+                for (int startIndex = 0; startIndex < increment; startIndex++) {
+                    insertionSort(array, startIndex, increment);
+                }
+                increment = increment / 2;
             }
-            increment = increment / 2;
-        }
+            
     }
     
         public void insertionSort(int[] array, int startIndex, int increment) {

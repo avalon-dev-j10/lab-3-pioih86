@@ -18,19 +18,28 @@ public class Main {
         Sort         shellSort      = new ShellSort();
         
         fibonacciInit.initialize(array);
+        System.out.print("Fibonacci: ");
+        printArr(array);
+        printSep();
         
         /*  TODO (Проверка№1 ЛР№3)
             - Вывести последовательность чисел Фибоначи и их сумму!
         */
         
-        randomInit.initialize(array);        
-        print(bubbleSort, array);
+        randomInit.initialize(array); 
+        printArr(array);
+        printSort(bubbleSort, array);
+        printSep();
         
         randomInit.initialize(array);
-        print(selectionSort, array);
+        printArr(array);
+        printSort(selectionSort, array);
+        printSep();
         
         randomInit.initialize(array);
-        print(shellSort, array);       
+        printArr(array);
+        printSort(shellSort, array);       
+        printSep();
         
         
 
@@ -65,7 +74,8 @@ public class Main {
 	     */
     }
     
-    static void print(Sort sort, int[] array){
+    static void printArr( int[] array ){                        //метод вывода массива
+        
             int sum = Arrays.stream(array).sum();
             
             for( int i = 0; i < array.length; i++ ){
@@ -73,22 +83,31 @@ public class Main {
             }
             System.out.println("cумма = " + sum);
             
-            sort.sort(array);
-            
+        }
+    static void printSort(Sort sort, int[] array) {             //метод вывода сортировки
+        
+        sort.sort(array);
+        
             System.out.print(sort.getName() + ": ");
             for( int i = 0; i < array.length - 1; i++ ){
                 System.out.print(array[i]);
-                if ( i == array.length - 2) break;
                 System.out.print(", ");
             }
+            System.out.println(array[array.length-1]);
+            
             /*  TODO (Проверка№1 ЛР№3)
                 - При выоде отсортированного массива выводится 19 чисел, хотя их 20!
                 Исправить!
                 - Добавить комментарии к полям и методам класса
             */
             System.out.println("");
-            System.out.println("------------------------------------------------");
-        }
+    
+    }
+    
+    static void printSep(){                                     //метод вывода разделителя
+        System.out.println("------------------------------------------------");
+    }
+    
 }
 
 
