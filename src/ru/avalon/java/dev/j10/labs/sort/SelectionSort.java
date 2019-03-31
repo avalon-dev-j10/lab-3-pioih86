@@ -22,7 +22,7 @@ public class SelectionSort implements Sort {
     String name = "Сортировка выбором";
     
     public void sort(int[] array) {
-        if ( array == null ) return;  
+        if (array == null) return;  
         for (int i = 0; i < array.length - 1; i++) 
         {  
             int min = i; 

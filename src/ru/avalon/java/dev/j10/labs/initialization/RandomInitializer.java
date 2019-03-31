@@ -35,6 +35,10 @@ public class RandomInitializer implements Initializer {
         - Добавить комментарии к полям и методам класса
     */
     
+    /*  TODO (Проверка№2 ЛР№3)
+        - Два прошлых замечания не исправленны!
+    */
+    
     public void initialize(int[] array) {
         for( int i = 0; i < array.length; i++ ){
             array[i] = (int)(Math.random()*( max - min + 1 ) - max);

@@ -22,7 +22,7 @@ public class ShellSort implements Sort {
     String name = "Сортировка Шелла";
     
     public void sort(int[] array) {
-            if ( array == null ) return;
+            if (array == null) return;
             int increment = array.length / 2;
             while (increment >= 1) {
                 for (int startIndex = 0; startIndex < increment; startIndex++) {
